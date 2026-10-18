@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Odia Calendar 2027 — Odisha Festivals, Panji & Public Holidays</title>
+<meta name="description" content="A bilingual (Odia & English) 2027 calendar for Odisha showing Gregorian and Odia Panji dates, all major festivals — Ratha Yatra, Raja Parba, Nuakhai, Durga Puja, Kumar Purnima, Kartika Purnima, Diwali — plus every public holiday, with search, festival details, print and PDF export." />
+<meta name="keywords" content="Odia calendar 2027, Odisha festivals 2027, Panji 2027, Ratha Yatra 2027, Raja Parba, Nuakhai, Kartika Purnima, Odia holidays" />
+<meta name="theme-color" content="#C1272D" />
+<meta name="author" content="Odia Calendar 2027" />
+<link rel="canonical" href="https://example.com/odia-calendar-2027/" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Odia Calendar 2027 — Odisha Festivals & Panji" />
+<meta property="og:description" content="Bilingual Odisha calendar for 2027 with Gregorian + Odia dates, every festival and public holiday, search, and PDF export." />
+<meta property="og:locale" content="en_IN" />
+<meta property="og:locale:alternate" content="or_IN" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Odia Calendar 2027 — Odisha Festivals & Panji" />
+<meta name="twitter:description" content="Bilingual Odisha calendar for 2027: Gregorian + Odia dates, festivals, holidays, search and PDF export." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Mukta:wght@300;400;500;600;700&family=Noto+Sans+Oriya:wght@400;500;600;700&family=Noto+Serif+Oriya:wght@500;600;700&family=Yatra+One&display=swap" rel="stylesheet" />
+
+<style>
+/* ============================================================
+   ODIA CALENDAR 2027 — design system
+   Palette grounded in Jagannath / Konark / Pattachitra:
+   sindoor vermillion · haldi turmeric · indigo night ·
+   palm-leaf parchment · deula maroon · Pattachitra leaf-green
+   ============================================================ */
+:root{
+  color-scheme: light dark;
+  --sindoor:#C1272D;      /* Jagannath red — primary */
+  --sindoor-deep:#8E1B20;
+  --haldi:#E8A00D;        /* turmeric gold — accent */
+  --haldi-soft:#F4C038;
+  --indigo:#1C2A4A;       /* night / depth */
+  --leaf:#3E6B48;         /* Pattachitra green — tertiary */
+  --maroon:#6B2016;       /* deula maroon */
+  --ink:#2A1710;          /* warm dark brown text */
+  --ink-soft:#5b4638;
+  --paper:#F5E9CE;        /* palm-leaf parchment */
+  --paper-2:#EFE0BE;      /* card / panel */
+  --paper-3:#E7D3A8;      /* deeper parchment lines */
+  --white-besha:#FBF4E2;  /* Balabhadra white */
+  --line:#D8BE8C;
+  --shadow: 22px 22px 0 -18px rgba(107,32,22,.20);
+
+  --bg:var(--paper);
+  --surface:var(--white-besha);
+  --surface-2:var(--paper-2);
+  --text:var(--ink);
+  --text-soft:var(--ink-soft);
+  --border:var(--line);
+  --hair:rgba(107,32,22,.16);
+
+  --f-display:"Yatra One", "Noto Serif Oriya", serif;
+  --f-serif:"Marcellus", "Noto Serif Oriya", serif;
+  --f-body:"Mukta", "Noto Sans Oriya", system-ui, sans-serif;
+  --f-odia:"Noto Sans Oriya", "Mukta", sans-serif;
+  --f-odia-serif:"Noto Serif Oriya", "Marcellus", serif;
+
+  --pad-top: env(safe-area-inset-top, 0px);
+  --pad-bottom: env(safe-area-inset-bottom, 0px);
+  box-sizing:border-box;
+  padding-top:var(--pad-top);
+  padding-bottom:var(--pad-bottom);
+}
+:root:not([data-theme="light"]){
+  @media (prefers-color-scheme: dark){
+    --bg:#12131C; --surface:#1B1D2B; --surface-2:#20233A;
+    --text:#F1E4C6; --text-soft:#c3b493; --border:#3a3c58; --hair:rgba(241,228,198,.12);
+    --paper-3:#2a2d47; --line:#3a3c58;
+    --shadow: 22px 22px 0 -18px rgba(0,0,0,.5);
+    --sindoor:#E24A4F; --sindoor-deep:#C1272D; --haldi:#F4C038;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#12131C; --surface:#1B1D2B; --surface-2:#20233A;
+  --text:#F1E4C6; --text-soft:#c3b493; --border:#3a3c58; --hair:rgba(241,228,198,.12);
+  --paper-3:#2a2d47; --line:#3a3c58;
+  --shadow: 22px 22px 0 -18px rgba(0,0,0,.5);
+  --sindoor:#E24A4F; --sindoor-deep:#C1272D; --haldi:#F4C038;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{ -webkit-text-size-adjust:100%; scroll-padding-top: calc(var(--pad-top) + 64px); }
+body{
+  margin:0; background:var(--bg); color:var(--text);
+  font-family:var(--f-body); font-weight:400; line-height:1.55;
+  font-size:16px; letter-spacing:.005em;
+  -webkit-font-smoothing:antialiased;
+  background-image:
+    radial-gradient(circle at 12% -5%, rgba(232,160,13,.10), transparent 40%),
+    radial-gradient(circle at 92% 0%, rgba(193,39,45,.09), transparent 42%);
+  background-attachment:fixed;
+}
+.lang-or{ font-family:var(--f-odia); }
+h1,h2,h3{ font-weight:400; line-height:1.12; }
+button{ font-family:inherit; cursor:pointer; color:inherit; }
+:focus-visible{ outline:3px solid var(--haldi); outline-offset:2px; border-radius:3px; }
+a{ color:var(--sindoor); }
+
+/* ---------- layout shell ---------- */
+.wrap{ max-width:1180px; margin:0 auto; padding:0 clamp(14px,3vw,30px) 64px; }
+
+/* ---------- masthead (the hero) ---------- */
+.masthead{ position:relative; overflow:hidden; color:var(--white-besha);
+  background:
+    linear-gradient(160deg, var(--maroon), var(--sindoor-deep) 55%, var(--sindoor));
+  border-bottom:5px solid var(--haldi);
+}
+.masthead::after{ /* Pattachitra dotted border band */
+  content:""; position:absolute; left:0; right:0; bottom:0; height:5px;
+  background:repeating-linear-gradient(90deg, var(--indigo) 0 10px, transparent 10px 20px);
+  opacity:.5;
+}
+.masthead-inner{ max-width:1180px; margin:0 auto; padding:clamp(18px,3vw,30px) clamp(14px,3vw,30px) clamp(20px,3vw,32px);
+  display:grid; grid-template-columns:1fr auto; gap:22px; align-items:center; position:relative; z-index:2; }
+.brand{ display:flex; align-items:center; gap:18px; min-width:0; }
+.netra-wheel{ flex:0 0 auto; width:clamp(64px,10vw,92px); height:clamp(64px,10vw,92px); }
+.wheel-spin{ transform-origin:50% 50%; animation:spin 60s linear infinite; }
+@keyframes spin{ to{ transform:rotate(360deg); } }
+@media (prefers-reduced-motion:reduce){ .wheel-spin{ animation:none; } }
+.brand-text{ min-width:0; }
+.brand-kicker{ font-family:var(--f-body); font-size:.72rem; font-weight:600;
+  letter-spacing:.32em; text-transform:uppercase; color:var(--haldi-soft); margin:0 0 2px; }
+.brand-title{ font-family:var(--f-display); font-size:clamp(2rem,6vw,3.5rem); margin:0; line-height:.92;
+  text-shadow:2px 3px 0 rgba(0,0,0,.18); }
+.brand-title .yr{ color:var(--haldi-soft); }
+.brand-sub{ font-family:var(--f-odia-serif); font-size:clamp(1rem,2.6vw,1.5rem); margin:4px 0 0; color:#fff; opacity:.96; }
+.masthead-controls{ display:flex; flex-direction:column; gap:10px; align-items:flex-end; }
+.pill-group{ display:inline-flex; background:rgba(0,0,0,.18); border:1px solid rgba(255,255,255,.28);
+  border-radius:999px; padding:3px; }
+.pill-group button{ border:0; background:transparent; color:#fff; padding:6px 14px; border-radius:999px;
+  font-size:.85rem; font-weight:600; letter-spacing:.02em; opacity:.8; }
+.pill-group button.on{ background:var(--haldi); color:var(--maroon); opacity:1; }
+.icon-btn{ background:rgba(0,0,0,.18); border:1px solid rgba(255,255,255,.28); color:#fff;
+  width:40px; height:40px; border-radius:50%; font-size:1.1rem; display:grid; place-items:center; }
+
+/* ---------- today band ---------- */
+.today-band{ background:var(--indigo); color:var(--white-besha); }
+.today-inner{ max-width:1180px; margin:0 auto; padding:14px clamp(14px,3vw,30px);
+  display:flex; flex-wrap:wrap; gap:10px 26px; align-items:center; }
+.today-tag{ font-size:.72rem; font-weight:700; letter-spacing:.28em; text-transform:uppercase;
+  color:var(--haldi-soft); }
+.today-greg{ font-family:var(--f-serif); font-size:1.15rem; }
+.today-odia{ font-family:var(--f-odia-serif); font-size:1.15rem; color:var(--haldi-soft); }
+.today-dot{ opacity:.4; }
+.today-up{ margin-left:auto; display:flex; align-items:center; gap:9px; font-size:.95rem;
+  background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.16); padding:6px 14px; border-radius:999px; }
+.today-up b{ color:var(--haldi-soft); font-weight:600; }
+
+/* ---------- toolbar ---------- */
+.toolbar{ position:sticky; top:var(--pad-top); z-index:30; background:var(--surface);
+  border-bottom:1px solid var(--border); box-shadow:0 6px 18px -14px rgba(0,0,0,.4); }
+.toolbar-inner{ max-width:1180px; margin:0 auto; padding:10px clamp(14px,3vw,30px);
+  display:flex; flex-wrap:wrap; gap:10px; align-items:center; }
+.views{ display:inline-flex; border:1.5px solid var(--sindoor); border-radius:10px; overflow:hidden; }
+.views button{ border:0; background:transparent; color:var(--sindoor); padding:8px 15px; font-weight:600;
+  font-size:.92rem; display:flex; align-items:center; gap:6px; }
+.views button.on{ background:var(--sindoor); color:#fff; }
+.nav-group{ display:inline-flex; align-items:center; gap:6px; }
+.nav-group .arrow{ width:36px; height:36px; border-radius:9px; border:1.5px solid var(--border);
+  background:var(--surface-2); font-size:1.1rem; display:grid; place-items:center; }
+.nav-group .arrow:hover{ border-color:var(--sindoor); color:var(--sindoor); }
+.period{ font-family:var(--f-serif); font-size:1.15rem; min-width:9.5ch; text-align:center; }
+.period small{ display:block; font-family:var(--f-odia-serif); font-size:.8rem; color:var(--text-soft); }
+.spacer{ flex:1 1 auto; }
+.search{ position:relative; }
+.search input{ font-family:inherit; font-size:.92rem; padding:9px 14px 9px 34px; border-radius:10px;
+  border:1.5px solid var(--border); background:var(--surface-2); color:var(--text); width:min(240px,52vw); }
+.search input:focus{ border-color:var(--sindoor); outline:none; }
+.search .mag{ position:absolute; left:11px; top:50%; transform:translateY(-50%); opacity:.5; }
+.tool-btn{ border:1.5px solid var(--border); background:var(--surface-2); border-radius:10px;
+  padding:8px 13px; font-weight:600; font-size:.9rem; display:inline-flex; align-items:center; gap:7px; }
+.tool-btn:hover{ border-color:var(--haldi); }
+
+/* ---------- section headings ---------- */
+.sec-head{ display:flex; align-items:baseline; gap:14px; margin:26px 2px 14px; }
+.sec-head h2{ font-family:var(--f-serif); font-size:1.5rem; margin:0; }
+.sec-head .rule{ flex:1; height:2px; background:
+  repeating-linear-gradient(90deg,var(--haldi) 0 6px, transparent 6px 12px); opacity:.6; }
+
+/* ---------- month grid ---------- */
+.cal-card{ background:var(--surface); border:1px solid var(--border); border-radius:16px;
+  box-shadow:var(--shadow); overflow:hidden; }
+.weekdays{ display:grid; grid-template-columns:repeat(7,1fr); background:var(--indigo); color:var(--white-besha); }
+.weekdays div{ padding:9px 4px; text-align:center; font-size:.78rem; font-weight:600; letter-spacing:.08em; }
+.weekdays div.sun{ color:var(--haldi-soft); }
+.grid{ display:grid; grid-template-columns:repeat(7,1fr); }
+.cell{ min-height:clamp(74px,12vw,116px); border-right:1px solid var(--hair); border-bottom:1px solid var(--hair);
+  padding:5px 6px; position:relative; display:flex; flex-direction:column; gap:3px; background:var(--surface);
+  text-align:left; align-items:stretch; width:100%; border-top:0; border-left:0; }
+.cell:nth-child(7n){ border-right:0; }
+.cell.blank{ background:repeating-linear-gradient(135deg,transparent 0 7px, var(--hair) 7px 8px); opacity:.5; }
+.cell.sunday{ background:linear-gradient(var(--surface),var(--surface)) padding-box; }
+.cell.govt::after{ content:""; position:absolute; inset:0; background:var(--haldi); opacity:.07; pointer-events:none; }
+.cell.holiday::after{ content:""; position:absolute; inset:0; background:var(--sindoor); opacity:.09; pointer-events:none; }
+.cell.today{ box-shadow:inset 0 0 0 3px var(--sindoor); z-index:2; }
+.cell:hover{ background:var(--surface-2); }
+.cell .g-num{ font-family:var(--f-serif); font-size:clamp(1rem,2.5vw,1.3rem); line-height:1; }
+.cell.sunday .g-num,.cell .g-num.sun{ color:var(--sindoor); }
+.cell .o-num{ position:absolute; top:5px; right:7px; font-family:var(--f-odia); font-size:.7rem;
+  color:var(--text-soft); }
+.chips{ margin-top:auto; display:flex; flex-direction:column; gap:2px; }
+.chip{ font-size:.68rem; line-height:1.2; padding:2px 6px; border-radius:5px; color:#fff;
+  overflow:hidden; text-overflow:ellipsis; white-space:nowrap; display:flex; align-items:center; gap:4px; border:0; width:100%; }
+.chip .ic{ font-size:.78rem; }
+.chip.more{ background:transparent; color:var(--text-soft); font-weight:600; padding-left:2px; }
+.cat-jagannath{ background:var(--sindoor); }
+.cat-state{ background:var(--haldi); color:var(--maroon); }
+.cat-national{ background:var(--indigo); }
+.cat-hindu{ background:var(--leaf); }
+.cat-seasonal{ background:var(--maroon); }
+.cat-faith{ background:#5a4a86; }
+.cat-observance{ background:#8a7a5c; }
+
+/* ---------- legend ---------- */
+.legend{ display:flex; flex-wrap:wrap; gap:8px 16px; margin:14px 4px 0; font-size:.82rem; color:var(--text-soft); }
+.legend span{ display:inline-flex; align-items:center; gap:6px; }
+.legend i{ width:13px; height:13px; border-radius:4px; display:inline-block; }
+
+/* ---------- year view ---------- */
+.year-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:18px; }
+.mini{ background:var(--surface); border:1px solid var(--border); border-radius:13px; padding:12px; box-shadow:var(--shadow); }
+.mini h3{ font-family:var(--f-serif); font-size:1.1rem; margin:0 0 2px; color:var(--sindoor); cursor:pointer; }
+.mini h3 small{ font-family:var(--f-odia-serif); color:var(--text-soft); font-size:.72rem; margin-left:6px; }
+.mini-grid{ display:grid; grid-template-columns:repeat(7,1fr); gap:1px; margin-top:6px; }
+.mini-grid .h{ font-size:.6rem; text-align:center; color:var(--text-soft); padding:2px 0; }
+.mini-grid .h.sun{ color:var(--sindoor); }
+.mini-day{ aspect-ratio:1; display:grid; place-items:center; font-size:.72rem; border-radius:5px; position:relative; }
+.mini-day.fest{ font-weight:700; }
+.mini-day.hol{ background:var(--sindoor); color:#fff; }
+.mini-day.festd{ box-shadow:inset 0 0 0 1.5px var(--haldi); }
+.mini-day.today{ box-shadow:inset 0 0 0 2px var(--indigo); }
+.mini-day.sun{ color:var(--sindoor); }
+
+/* ---------- festival list view ---------- */
+.filters{ display:flex; flex-wrap:wrap; gap:8px; margin:4px 2px 18px; }
+.filters button{ border:1.5px solid var(--border); background:var(--surface); border-radius:999px;
+  padding:6px 14px; font-size:.86rem; font-weight:600; color:var(--text-soft); }
+.filters button.on{ background:var(--indigo); color:#fff; border-color:var(--indigo); }
+.fest-list{ display:grid; gap:12px; }
+.fest-row{ display:grid; grid-template-columns:auto 1fr auto; gap:16px; align-items:center;
+  background:var(--surface); border:1px solid var(--border); border-left-width:6px; border-radius:13px;
+  padding:14px 18px; text-align:left; width:100%; box-shadow:var(--shadow); transition:transform .12s ease; }
+.fest-row:hover{ transform:translateX(3px); }
+.fest-date{ text-align:center; min-width:58px; }
+.fest-date .d{ font-family:var(--f-serif); font-size:1.7rem; line-height:1; }
+.fest-date .m{ font-size:.74rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--sindoor); }
+.fest-date .w{ font-size:.68rem; color:var(--text-soft); }
+.fest-main .nm{ font-family:var(--f-serif); font-size:1.2rem; }
+.fest-main .nm.lang-or{ font-family:var(--f-odia-serif); }
+.fest-main .od{ font-family:var(--f-odia); color:var(--text-soft); font-size:.92rem; }
+.fest-main .sig{ font-size:.88rem; color:var(--text-soft); margin-top:3px;
+  display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+.fest-tags{ display:flex; flex-direction:column; align-items:flex-end; gap:6px; }
+.tag{ font-size:.68rem; font-weight:700; padding:3px 9px; border-radius:999px; color:#fff; white-space:nowrap; }
+.tag.holiday{ background:var(--sindoor); }
+.tag.cat{ opacity:.9; }
+.fest-emoji{ font-size:1.6rem; }
+.empty{ text-align:center; padding:50px 20px; color:var(--text-soft); }
+.empty .big{ font-size:2.4rem; }
+
+/* ---------- modal ---------- */
+.modal-bg{ position:fixed; inset:0; background:rgba(20,10,6,.55); backdrop-filter:blur(3px);
+  display:grid; place-items:center; padding:16px; z-index:60; }
+.modal{ background:var(--surface); border:1px solid var(--border); border-radius:18px;
+  max-width:560px; width:100%; max-height:88vh; overflow:auto; box-shadow:0 30px 60px -20px rgba(0,0,0,.6);
+  border-top:6px solid var(--sindoor); }
+.modal-head{ padding:22px 24px 16px; position:relative; }
+.modal-head .close{ position:absolute; top:14px; right:14px; width:36px; height:36px; border-radius:50%;
+  border:1.5px solid var(--border); background:var(--surface-2); font-size:1.1rem; }
+.modal-emoji{ font-size:2.2rem; }
+.modal-head h2{ font-family:var(--f-serif); font-size:1.6rem; margin:6px 0 2px; padding-right:40px; }
+.modal-head h2.lang-or{ font-family:var(--f-odia-serif); }
+.modal-head .alt{ font-family:var(--f-odia-serif); color:var(--sindoor); font-size:1.15rem; }
+.modal-meta{ display:flex; flex-wrap:wrap; gap:8px; margin:14px 0 4px; }
+.meta-box{ background:var(--surface-2); border:1px solid var(--hair); border-radius:10px; padding:8px 12px; flex:1 1 120px; }
+.meta-box .k{ font-size:.66rem; letter-spacing:.14em; text-transform:uppercase; color:var(--text-soft); }
+.meta-box .v{ font-family:var(--f-serif); font-size:1.02rem; }
+.meta-box .v.od{ font-family:var(--f-odia-serif); }
+.modal-body{ padding:4px 24px 24px; }
+.modal-body h4{ font-family:var(--f-body); font-size:.72rem; letter-spacing:.16em; text-transform:uppercase;
+  color:var(--sindoor); margin:18px 0 6px; }
+.modal-body p{ margin:0; font-size:.98rem; line-height:1.6; }
+.modal-body p.lang-or{ font-family:var(--f-odia); line-height:1.75; }
+
+/* ---------- tooltip ---------- */
+[data-tip]{ position:relative; }
+[data-tip]:hover::after, [data-tip]:focus-visible::after{
+  content:attr(data-tip); position:absolute; bottom:calc(100% + 6px); left:50%; transform:translateX(-50%);
+  background:var(--indigo); color:#fff; padding:6px 10px; border-radius:7px; font-size:.74rem; white-space:nowrap;
+  z-index:50; box-shadow:0 6px 16px rgba(0,0,0,.3); pointer-events:none; max-width:220px; white-space:normal; width:max-content; }
+
+/* ---------- footer ---------- */
+.foot{ margin-top:40px; padding:26px 0 10px; border-top:2px solid var(--hair); color:var(--text-soft); font-size:.85rem; }
+.foot .konark{ text-align:center; margin-bottom:14px; opacity:.8; }
+.foot p{ margin:5px 0; }
+
+/* ---------- responsive ---------- */
+@media (max-width:720px){
+  .masthead-inner{ grid-template-columns:1fr; }
+  .masthead-controls{ align-items:flex-start; flex-direction:row; flex-wrap:wrap; }
+  .today-up{ margin-left:0; width:100%; }
+  .cell .o-num{ display:none; }
+  .cell{ min-height:64px; }
+  .chip .lbl{ display:none; }
+  .chip{ width:auto; align-self:flex-start; padding:2px 5px; }
+  .fest-row{ grid-template-columns:auto 1fr; }
+  .fest-tags{ grid-column:1 / -1; flex-direction:row; align-items:center; }
+  .fest-emoji{ display:none; }
+  .period{ min-width:auto; }
+}
+@media (max-width:420px){
+  .weekdays div{ font-size:.66rem; padding:7px 2px; }
+}
+
+/* ---------- print / PDF ---------- */
+@media print{
+  :root{ --bg:#fff; --surface:#fff; --surface-2:#fff; --text:#000; --border:#999; --hair:#ccc; }
+  body{ background:#fff; }
+  .toolbar,.masthead-controls,.today-up,.no-print,.icon-btn,.foot .no-print{ display:none !important; }
+  .masthead{ color:#000; background:#fff; border-bottom:2px solid #000; }
+  .brand-title{ color:#000; text-shadow:none; }
+  .brand-title .yr, .brand-sub{ color:#000; }
+  .today-band{ background:#fff; color:#000; border-bottom:1px solid #000; }
+  .today-odia,.today-tag{ color:#000; }
+  .cal-card,.mini,.fest-row{ box-shadow:none; break-inside:avoid; }
+  .weekdays{ background:#eee; color:#000; }
+  .chip{ color:#000 !important; background:#fff !important; border:1px solid #999 !important; }
+  .year-grid{ grid-template-columns:repeat(3,1fr); }
+  .wrap{ padding-bottom:0; }
+  @page{ margin:12mm; }
+}
+</style>
+</head>
+<body>
+<div id="root" role="application" aria-label="Odia Calendar 2027"></div>
+<noscript><p style="padding:24px;font-family:sans-serif">This interactive Odia Calendar needs JavaScript enabled to display festivals and dates.</p></noscript>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js" crossorigin></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js" crossorigin></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" crossorigin></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.6/babel.min.js" crossorigin></script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"Odia Calendar 2027","inLanguage":["en","or"],"description":"Bilingual Odisha calendar for 2027 with Gregorian and Odia Panji dates, festivals and public holidays."}
+</script>
+
+<script type="text/babel" data-presets="react">
+const { useState, useMemo, useEffect, useRef } = React;
+
+/* ============================================================
+   1.  ODIA SOLAR (PANJI) CALENDAR ENGINE
+   The Odia civil calendar is solar: each month begins on a
+   Sankranti (the Sun's sidereal ingress). Given the 12 Sankranti
+   dates, every Gregorian day maps to an Odia solar month + day.
+   2027 Sankranti dates verified against panchang sources.
+   ============================================================ */
+const ODIA_MONTHS = [
+  {en:"Baisakha",   or:"ବୈଶାଖ"},   {en:"Jyeshtha",  or:"ଜ୍ୟେଷ୍ଠ"},
+  {en:"Ashadha",    or:"ଆଷାଢ଼"},    {en:"Shrabana",  or:"ଶ୍ରାବଣ"},
+  {en:"Bhadraba",   or:"ଭାଦ୍ରବ"},   {en:"Aswina",    or:"ଆଶ୍ୱିନ"},
+  {en:"Kartika",    or:"କାର୍ତ୍ତିକ"}, {en:"Margasira", or:"ମାର୍ଗଶିର"},
+  {en:"Pausa",      or:"ପୌଷ"},      {en:"Magha",     or:"ମାଘ"},
+  {en:"Phalguna",   or:"ଫାଲ୍ଗୁନ"},  {en:"Chaitra",   or:"ଚୈତ୍ର"}
+];
+// {date: [Y,M(1-12),D], m: index into ODIA_MONTHS}
+const SANKRANTI = [
+  {d:[2026,8,17],  m:4}, {d:[2026,9,17],  m:5}, {d:[2026,10,17], m:6},
+  {d:[2026,11,16], m:7}, {d:[2026,12,16], m:8}, {d:[2027,1,14],  m:9},
+  {d:[2027,2,13],  m:10},{d:[2027,3,15],  m:11},{d:[2027,4,14],  m:0},
+  {d:[2027,5,15],  m:1}, {d:[2027,6,15],  m:2}, {d:[2027,7,17],  m:3},
+  {d:[2027,8,17],  m:4}, {d:[2027,9,17],  m:5}, {d:[2027,10,18], m:6},
+  {d:[2027,11,17], m:7}, {d:[2027,12,16], m:8}
+];
+const dayNum = (y,m,d)=> Math.floor(Date.UTC(y,m-1,d)/86400000);
+const SANK = SANKRANTI.map(s=>({n:dayNum(s.d[0],s.d[1],s.d[2]), m:s.m})).sort((a,b)=>a.n-b.n);
+const OD = "୦୧୨୩୪୫୬୭୮୯";
+const toOdiaDigits = (s)=> String(s).replace(/[0-9]/g,c=>OD[+c]);
+const num = (n,lang)=> lang==="or" ? toOdiaDigits(n) : String(n);
+
+// Vilayati Sana (Odia era) rolls over on Kanya Sankranti (~17 Sep)
+function vilayati(n){
+  if(n >= dayNum(2027,9,17)) return 1435;
+  if(n >= dayNum(2026,9,17)) return 1434;
+  return 1433;
+}
+function odiaDate(dateObj){
+  const n = dayNum(dateObj.getFullYear(), dateObj.getMonth()+1, dateObj.getDate());
+  let anchor = null;
+  for(const s of SANK){ if(s.n <= n) anchor = s; else break; }
+  if(!anchor) return null;
+  const day = n - anchor.n + 1;
+  return { month: ODIA_MONTHS[anchor.m], day, sala: vilayati(n) };
+}
+
+/* ============================================================
+   2.  BILINGUAL UI STRINGS
+   ============================================================ */
+const WEEK_EN = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+const WEEK_OR = ["ରବି","ସୋମ","ମଙ୍ଗଳ","ବୁଧ","ଗୁରୁ","ଶୁକ୍ର","ଶନି"];
+const WEEKFULL_EN = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+const WEEKFULL_OR = ["ରବିବାର","ସୋମବାର","ମଙ୍ଗଳବାର","ବୁଧବାର","ଗୁରୁବାର","ଶୁକ୍ରବାର","ଶନିବାର"];
+const GMON_EN = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+const GMON_OR = ["ଜାନୁଆରୀ","ଫେବୃଆରୀ","ମାର୍ଚ୍ଚ","ଅପ୍ରେଲ","ମେ","ଜୁନ","ଜୁଲାଇ","ଅଗଷ୍ଟ","ସେପ୍ଟେମ୍ବର","ଅକ୍ଟୋବର","ନଭେମ୍ବର","ଡିସେମ୍ବର"];
+const GMON_SHORT = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+const T = {
+  en:{ subtitle:"Odisha Panji & Festival Calendar", month:"Month", year:"Year", festivals:"Festivals",
+    today:"Today", odiaDate:"Odia date", upcoming:"Next", search:"Search festivals…", print:"Print",
+    pdf:"PDF", theme:"Theme", all:"All", holidaysOnly:"Public holidays", gregorian:"Gregorian",
+    significance:"Significance", traditions:"Traditions & rituals", weekday:"Weekday", type:"Type",
+    holiday:"Public holiday", more:"more", noResults:"No festivals match your search.",
+    festivalsOf:"Festivals & holidays of", sala:"Sāla", allYear:"All 2027 festivals & holidays",
+    govtSun:"Government holiday (Sunday)", govtSat:"Government holiday (2nd / 4th Saturday)",
+    langName:"ଓଡ଼ିଆ", jump:"Open month" },
+  or:{ subtitle:"ଓଡ଼ିଶା ପାଞ୍ଜି ଓ ପର୍ବପର୍ବାଣି", month:"ମାସ", year:"ବର୍ଷ", festivals:"ପର୍ବ",
+    today:"ଆଜି", odiaDate:"ଓଡ଼ିଆ ତାରିଖ", upcoming:"ଆଗାମୀ", search:"ପର୍ବ ଖୋଜନ୍ତୁ…", print:"ପ୍ରିଣ୍ଟ",
+    pdf:"ପିଡିଏଫ୍", theme:"ଥିମ୍", all:"ସବୁ", holidaysOnly:"ସରକାରୀ ଛୁଟି", gregorian:"ଇଂରାଜୀ ତାରିଖ",
+    significance:"ମହତ୍ତ୍ୱ", traditions:"ପରମ୍ପରା ଓ ରୀତି", weekday:"ବାର", type:"ପ୍ରକାର",
+    holiday:"ସରକାରୀ ଛୁଟି", more:"ଅଧିକ", noResults:"କୌଣସି ପର୍ବ ମିଳିଲା ନାହିଁ।",
+    festivalsOf:"ପର୍ବ ଓ ଛୁଟି —", sala:"ସାଲ", allYear:"୨୦୨୭ ର ସମସ୍ତ ପର୍ବ ଓ ଛୁଟି",
+    govtSun:"ସରକାରୀ ଛୁଟି (ରବିବାର)", govtSat:"ସରକାରୀ ଛୁଟି (୨ୟ / ୪ର୍ଥ ଶନିବାର)",
+    langName:"English", jump:"ମାସ ଖୋଲନ୍ତୁ" }
+};
+
+const CATS = {
+  jagannath:{ en:"Jagannath",     or:"ଜଗନ୍ନାଥ",     cls:"cat-jagannath" },
+  state:    { en:"State holiday", or:"ରାଜ୍ୟ ଛୁଟି",   cls:"cat-state" },
+  national: { en:"National",      or:"ଜାତୀୟ",        cls:"cat-national" },
+  hindu:    { en:"Hindu festival",or:"ହିନ୍ଦୁ ପର୍ବ",  cls:"cat-hindu" },
+  seasonal: { en:"Seasonal",      or:"ଋତୁ ପର୍ବ",     cls:"cat-seasonal" },
+  faith:    { en:"Other faiths",  or:"ଅନ୍ୟ ଧର୍ମ",    cls:"cat-faith" },
+  observance:{en:"Observance",    or:"ଅନୁଷ୍ଠାନ",     cls:"cat-observance" }
+};
+
+/* ============================================================
+   3.  FESTIVAL & HOLIDAY DATA — Odisha 2027
+   date "YYYY-MM-DD" (IST civil date) · cat key · hol=gazetted
+   All dates verified against panchang / DoPT / Odisha sources.
+   Lunar & Islamic dates can shift ±1 day by local sighting.
+   ============================================================ */
+const FESTIVALS = [
+ {date:"2027-01-14",cat:"seasonal",hol:true,ic:"🪁",en:"Makar Sankranti",or:"ମକର ସଂକ୍ରାନ୍ତି",
+  sigEn:"Marks the Sun's entry into Capricorn and the start of Uttarayan — a harvest thanksgiving observed across India.",
+  sigOr:"ସୂର୍ଯ୍ୟ ମକର ରାଶିରେ ପ୍ରବେଶ କରନ୍ତି ଓ ଉତ୍ତରାୟଣ ଆରମ୍ଭ ହୁଏ; ଏହା ଏକ ଫସଲ ଉତ୍ସବ।",
+  trEn:"In Odisha, freshly harvested rice is offered as Makara Chaula (raw rice, banana, coconut, jaggery). Some panchangs observe it on 15 January.",
+  trOr:"ଓଡ଼ିଶାରେ ମକର ଚାଉଳ (ଅଁଳା ଚାଉଳ, କଦଳୀ, ନଡ଼ିଆ, ଗୁଡ଼) ଅର୍ପଣ କରାଯାଏ। କେତେକ ପାଞ୍ଜିରେ ୧୫ ଜାନୁଆରୀ।"},
+
+ {date:"2027-01-26",cat:"national",hol:true,ic:"🇮🇳",en:"Republic Day",or:"ଗଣତନ୍ତ୍ର ଦିବସ",
+  sigEn:"Commemorates the adoption of the Constitution of India in 1950.",
+  sigOr:"୧୯୫୦ ମସିହାରେ ଭାରତୀୟ ସମ୍ବିଧାନ ଗ୍ରହଣର ସ୍ମୃତିରେ ପାଳିତ।",
+  trEn:"Flag hoisting, parades and cultural programmes are held statewide.",
+  trOr:"ରାଜ୍ୟସାରା ପତାକା ଉତ୍ତୋଳନ, ପରେଡ୍ ଓ ସାଂସ୍କୃତିକ କାର୍ଯ୍ୟକ୍ରମ।"},
+
+ {date:"2027-02-11",cat:"hindu",hol:true,ic:"📖",en:"Saraswati Puja (Basant Panchami)",or:"ସରସ୍ୱତୀ ପୂଜା / ବସନ୍ତ ପଞ୍ଚମୀ",
+  sigEn:"Worship of Goddess Saraswati, deity of learning, arts and music, on Magha Shukla Panchami.",
+  sigOr:"ବିଦ୍ୟା, କଳା ଓ ସଙ୍ଗୀତର ଅଧିଷ୍ଠାତ୍ରୀ ଦେବୀ ସରସ୍ୱତୀଙ୍କ ଆରାଧନା।",
+  trEn:"Schools and colleges hold puja; children begin learning to write (Khadi Chuan); devotees wear yellow.",
+  trOr:"ବିଦ୍ୟାଳୟ ଓ ମହାବିଦ୍ୟାଳୟରେ ପୂଜା; ଶିଶୁମାନଙ୍କ ଖଡ଼ି ଛୁଆଁ; ହଳଦିଆ ବସ୍ତ୍ର ପରିଧାନ।"},
+
+ {date:"2027-03-06",cat:"hindu",hol:true,ic:"🔱",en:"Maha Shivaratri",or:"ମହା ଶିବରାତ୍ରି",
+  sigEn:"The great night of Lord Shiva; devotees fast and keep vigil till the Mahadipa is lit.",
+  sigOr:"ଭଗବାନ ଶିବଙ୍କ ମହାରାତ୍ରି; ଭକ୍ତମାନେ ଉପବାସ ରହି ମହାଦୀପ ଜଳିବା ପର୍ଯ୍ୟନ୍ତ ଜାଗରଣ କରନ୍ତି।",
+  trEn:"At Lingaraj Temple, Bhubaneswar the Mahadipa is raised atop the shikhara; huge crowds at Kapilash and Dhabaleswar.",
+  trOr:"ଭୁବନେଶ୍ୱରର ଲିଙ୍ଗରାଜ ମନ୍ଦିରରେ ଶିଖର ଉପରେ ମହାଦୀପ; କପିଳାଶ ଓ ଧବଳେଶ୍ୱରରେ ଭିଡ଼।"},
+
+ {date:"2027-03-10",cat:"faith",hol:true,ic:"🌙",en:"Eid-ul-Fitr",or:"ଇଦ୍-ଉଲ୍-ଫିତର",
+  sigEn:"Marks the end of the fasting month of Ramadan — a day of feasting and charity (subject to moon sighting; ~9–10 March).",
+  sigOr:"ରମଜାନ ମାସର ଉପବାସ ସମାପ୍ତିର ପର୍ବ (ଚନ୍ଦ୍ର ଦର୍ଶନ ଅନୁସାରେ; ~୯–୧୦ ମାର୍ଚ୍ଚ)।",
+  trEn:"Eid namaz, sweet sewai, Zakat/Fitra charity and family visits.",
+  trOr:"ଇଦ୍ ନମାଜ, ମିଠା ସେୱାଇ, ଦାନ ଓ ପରିବାର ସାକ୍ଷାତ।"},
+
+ {date:"2027-03-22",cat:"hindu",hol:true,ic:"🎨",en:"Dola Purnima & Holi",or:"ଦୋଳ ପୂର୍ଣ୍ଣିମା ଓ ହୋଲି",
+  sigEn:"Odisha's spring festival: Radha–Krishna idols ride decorated swings (dola) in procession, and colours are played.",
+  sigOr:"ଓଡ଼ିଶାର ବସନ୍ତ ପର୍ବ: ରାଧା–କୃଷ୍ଣ ବିଗ୍ରହ ସଜାଯାଇଥିବା ଦୋଳିରେ ବିଜେ କରନ୍ତି ଓ ଅବିର ଖେଳ ହୁଏ।",
+  trEn:"Dola melana, bhoga and abira; Holika Dahan on the eve (21 Mar); the colour-play holiday is on 22–23 March.",
+  trOr:"ଦୋଳ ମେଳଣ, ଭୋଗ ଓ ଅବିର; ପୂର୍ବ ସନ୍ଧ୍ୟାରେ ହୋଲିକା ଦହନ (୨୧ ମାର୍ଚ୍ଚ); ରଙ୍ଗ ଖେଳ ୨୨–୨୩ ମାର୍ଚ୍ଚ।"},
+
+ {date:"2027-03-26",cat:"faith",hol:true,ic:"✝️",en:"Good Friday",or:"ଗୁଡ୍ ଫ୍ରାଇଡେ",
+  sigEn:"Commemorates the crucifixion of Jesus Christ.",
+  sigOr:"ଯୀଶୁ ଖ୍ରୀଷ୍ଟଙ୍କ କ୍ରୁଶାରୋହଣର ସ୍ମୃତି ଦିବସ।",
+  trEn:"Church services, fasting and quiet reflection.",
+  trOr:"ଗିର୍ଜା ପ୍ରାର୍ଥନା, ଉପବାସ ଓ ଧ୍ୟାନ।"},
+
+ {date:"2027-04-01",cat:"state",hol:true,ic:"🏛️",en:"Utkal Divas (Odisha Day)",or:"ଉତ୍କଳ ଦିବସ",
+  sigEn:"Marks the formation of the separate province of Odisha on 1 April 1936.",
+  sigOr:"୧ ଏପ୍ରିଲ ୧୯୩୬ରେ ପୃଥକ ଓଡ଼ିଶା ପ୍ରଦେଶ ଗଠନର ସ୍ମୃତି ଦିବସ।",
+  trEn:"State functions honour the Odia language, land and leaders such as Utkal Gaurav Madhusudan Das.",
+  trOr:"ଓଡ଼ିଆ ଭାଷା, ଭୂମି ଓ ଉତ୍କଳ ଗୌରବ ମଧୁସୂଦନ ଦାସଙ୍କ ପରି ନେତାଙ୍କୁ ସମ୍ମାନ।"},
+
+ {date:"2027-04-14",cat:"state",hol:true,ic:"🌿",en:"Pana Sankranti — Odia New Year",or:"ପଣା ସଂକ୍ରାନ୍ତି — ଓଡ଼ିଆ ନବବର୍ଷ",
+  sigEn:"Maha Bishuba Sankranti: the Odia solar new year and first day of Baisakha, celebrated with sweet Bela Pana.",
+  sigOr:"ମହା ବିଷୁବ ସଂକ୍ରାନ୍ତି: ଓଡ଼ିଆ ନବବର୍ଷ ଓ ବୈଶାଖର ପ୍ରଥମ ଦିନ, ମିଠା ବେଲ ପଣା ସହ ପାଳିତ।",
+  trEn:"Bela pana is shared; Basundhara Theki drips water on Tulasi; Jhamu, Danda and Meru Jatra culminate.",
+  trOr:"ବେଲ ପଣା ବଣ୍ଟନ; ବସୁନ୍ଧରା ଠେକିରୁ ତୁଳସୀରେ ଜଳ; ଝାମୁ, ଦଣ୍ଡ ଓ ମେରୁ ଯାତ୍ରା ସମାପନ।"},
+
+ {date:"2027-04-15",cat:"hindu",hol:true,ic:"🏹",en:"Ram Navami",or:"ରାମ ନବମୀ",
+  sigEn:"Birth of Lord Rama, seventh avatar of Vishnu, on Chaitra Shukla Navami — the close of Chaitra Navratri.",
+  sigOr:"ଚୈତ୍ର ଶୁକ୍ଳ ନବମୀରେ ବିଷ୍ଣୁଙ୍କ ସପ୍ତମ ଅବତାର ଭଗବାନ ରାମଙ୍କ ଜନ୍ମ।",
+  trEn:"Ramayana recitals, bhajans and temple processions.",
+  trOr:"ରାମାୟଣ ପାଠ, ଭଜନ ଓ ମନ୍ଦିର ଶୋଭାଯାତ୍ରା।"},
+
+ {date:"2027-04-19",cat:"faith",hol:true,ic:"☸️",en:"Mahavir Jayanti",or:"ମହାବୀର ଜୟନ୍ତୀ",
+  sigEn:"Birth of Lord Mahavira, the 24th Jain Tirthankara.",
+  sigOr:"ଜୈନ ଧର୍ମର ୨୪ତମ ତୀର୍ଥଙ୍କର ଭଗବାନ ମହାବୀରଙ୍କ ଜନ୍ମ।",
+  trEn:"Prayers, processions and acts of charity and non-violence.",
+  trOr:"ପ୍ରାର୍ଥନା, ଶୋଭାଯାତ୍ରା ଓ ଅହିଂସାର ଅନୁଷ୍ଠାନ।"},
+
+ {date:"2027-05-09",cat:"jagannath",hol:false,ic:"🌾",en:"Akshaya Tritiya (Chandan Yatra begins)",or:"ଅକ୍ଷୟ ତୃତୀୟା / ଚନ୍ଦନ ଯାତ୍ରା",
+  sigEn:"An auspicious day for beginnings: ploughing and sowing (Akhi Muthi Anukula) starts and the 21-day Chandan Yatra of Lord Jagannath opens.",
+  sigOr:"ଶୁଭ ଆରମ୍ଭର ଦିନ: ଅଖି ମୁଠି ଅନୁକୂଳ (ବୁଣା) ଆରମ୍ଭ ଓ ଜଗନ୍ନାଥଙ୍କ ୨୧ ଦିନିଆ ଚନ୍ଦନ ଯାତ୍ରା ଆରମ୍ଭ।",
+  trEn:"Construction of the Rath Yatra chariots begins at Puri; sandal-paste boat rituals on the Narendra Tank.",
+  trOr:"ପୁରୀରେ ରଥ ନିର୍ମାଣ ଆରମ୍ଭ; ନରେନ୍ଦ୍ର ପୁଷ୍କରିଣୀରେ ଚନ୍ଦନ ଚାପ।"},
+
+ {date:"2027-05-17",cat:"faith",hol:true,ic:"🐐",en:"Eid-ul-Adha (Bakrid)",or:"ଇଦ୍-ଉଲ୍-ଅଜହା / ବକ୍ରିଦ",
+  sigEn:"The Feast of Sacrifice honouring Prophet Ibrahim's devotion (subject to moon sighting; ~16–17 May).",
+  sigOr:"ହଜରତ ଇବ୍ରାହିମଙ୍କ ତ୍ୟାଗର ସ୍ମୃତିରେ କୁର୍ବାନୀ ପର୍ବ (ଚନ୍ଦ୍ର ଦର୍ଶନ ଅନୁସାରେ)।",
+  trEn:"Eid namaz, Qurbani and sharing of meat and charity.",
+  trOr:"ଇଦ୍ ନମାଜ, କୁର୍ବାନୀ ଓ ଦାନ।"},
+
+ {date:"2027-05-20",cat:"faith",hol:true,ic:"☸️",en:"Buddha Purnima",or:"ବୁଦ୍ଧ ପୂର୍ଣ୍ଣିମା",
+  sigEn:"Birth, enlightenment and passing of Gautama Buddha — significant at Odisha's Buddhist heritage sites.",
+  sigOr:"ଗୌତମ ବୁଦ୍ଧଙ୍କ ଜନ୍ମ, ଜ୍ଞାନ ଓ ମହାପରିନିର୍ବାଣ — ଓଡ଼ିଶାର ବୌଦ୍ଧ କ୍ଷେତ୍ରରେ ବିଶେଷ।",
+  trEn:"Prayers and meditation at Dhauli, Lalitgiri, Ratnagiri and Udayagiri.",
+  trOr:"ଧଉଳି, ଲଳିତଗିରି, ରତ୍ନଗିରି ଓ ଉଦୟଗିରିରେ ପ୍ରାର୍ଥନା ଓ ଧ୍ୟାନ।"},
+
+ {date:"2027-06-04",cat:"hindu",hol:false,ic:"🪷",en:"Savitri Amavasya (Sabitri Brata)",or:"ସାବିତ୍ରୀ ଅମାବାସ୍ୟା",
+  sigEn:"Married women fast for the long life of their husbands, recalling Savitri who won back Satyavan's life from Yama.",
+  sigOr:"ବିବାହିତା ନାରୀମାନେ ସ୍ୱାମୀଙ୍କ ଦୀର୍ଘାୟୁ ପାଇଁ ଉପବାସ କରନ୍ତି, ସାବିତ୍ରୀଙ୍କ କଥା ସ୍ମରଣ କରି।",
+  trEn:"Banyan-tree worship, fruit offerings and new saris — a major women's vrata in Odisha.",
+  trOr:"ବରଗଛ ପୂଜା, ଫଳ ଅର୍ପଣ ଓ ନୂଆ ଶାଢ଼ୀ — ଓଡ଼ିଶାର ପ୍ରମୁଖ ନାରୀ ବ୍ରତ।"},
+
+ {date:"2027-06-14",cat:"state",hol:false,ic:"🌱",en:"Pahili Raja",or:"ପହିଲି ରଜ",
+  sigEn:"First day of the three-day Raja Parba celebrating womanhood and the earth's fertility before the monsoon.",
+  sigOr:"ତିନି ଦିନିଆ ରଜ ପର୍ବର ପ୍ରଥମ ଦିନ — ନାରୀତ୍ୱ ଓ ବର୍ଷା ପୂର୍ବ ଭୂମିର ଉର୍ବରତାର ଉତ୍ସବ।",
+  trEn:"Girls swing on decorated banyan swings, wear new clothes and alata, and play games; poda pitha is made.",
+  trOr:"ଝିଅମାନେ ସଜା ଦୋଳିରେ ଝୁଲନ୍ତି, ନୂଆ ଲୁଗା ଓ ଅଳତା ପିନ୍ଧନ୍ତି; ପୋଡ଼ ପିଠା ତିଆରି ହୁଏ।"},
+
+ {date:"2027-06-15",cat:"state",hol:true,ic:"🌸",en:"Raja Sankranti (Raja Parba)",or:"ରଜ ସଂକ୍ରାନ୍ତି / ରଜ ପର୍ବ",
+  sigEn:"The main day of Raja, on Mithuna Sankranti and the onset of the rains; Mother Earth (Bhudevi) is honoured and rested.",
+  sigOr:"ରଜର ମୁଖ୍ୟ ଦିନ, ମିଥୁନ ସଂକ୍ରାନ୍ତି ଓ ବର୍ଷାରମ୍ଭ; ଧରିତ୍ରୀ ମାତାଙ୍କୁ ସମ୍ମାନ ଓ ବିଶ୍ରାମ।",
+  trEn:"No tilling of soil; swings, indoor games, pithas and special foods; women rest from household chores.",
+  trOr:"ମାଟି ଚାଷ ବନ୍ଦ; ଦୋଳି, ଖେଳ, ପିଠା ଓ ବିଶେଷ ଖାଦ୍ୟ; ନାରୀମାନେ ଘରକାମରୁ ବିଶ୍ରାମ।"},
+
+ {date:"2027-06-16",cat:"state",hol:false,ic:"🌾",en:"Basi Raja",or:"ବାସି ରଜ",
+  sigEn:"Third day of Raja; the following day, Vasumati Snana, marks the ceremonial bath of Bhudevi.",
+  sigOr:"ରଜର ତୃତୀୟ ଦିନ; ପରଦିନ ବସୁମତୀ ସ୍ନାନରେ ଧରିତ୍ରୀଙ୍କ ଅନୁଷ୍ଠାନିକ ସ୍ନାନ।",
+  trEn:"Continued swinging and feasting; ritual bath of the grinding stone worshipped as Bhumi.",
+  trOr:"ଝୁଲଣ ଓ ଭୋଜି ଚାଲେ; ସିଲ ପୁଆଁକୁ ଭୂମି ରୂପେ ସ୍ନାନ।"},
+
+ {date:"2027-06-16",cat:"faith",hol:true,ic:"🕌",en:"Muharram",or:"ମହରମ୍",
+  sigEn:"The Day of Ashura, mourning the martyrdom of Imam Husain at Karbala (subject to moon sighting).",
+  sigOr:"ଆଶୁରା ଦିବସ — କର୍ବଲାରେ ଇମାମ ହୁସେନଙ୍କ ଶହୀଦୀର ଶୋକ (ଚନ୍ଦ୍ର ଦର୍ଶନ ଅନୁସାରେ)।",
+  trEn:"Tazia processions, majlis gatherings and fasting.",
+  trOr:"ତାଜିଆ ଶୋଭାଯାତ୍ରା, ମଜଲିସ୍ ଓ ଉପବାସ।"},
+
+ {date:"2027-06-18",cat:"jagannath",hol:false,ic:"🛁",en:"Snana Yatra (Deba Snana Purnima)",or:"ସ୍ନାନ ଯାତ୍ରା",
+  sigEn:"The Puri deities are bathed with 108 pitchers of water on the Snana Bedi; afterwards they 'fall ill' and enter Anasara seclusion.",
+  sigOr:"ପୁରୀର ଦେବତାମାନେ ସ୍ନାନ ବେଦୀରେ ୧୦୮ କଳସ ଜଳରେ ସ୍ନାନ କରନ୍ତି; ପରେ ଅନସର ଏକାନ୍ତବାସ।",
+  trEn:"Public darshan on the bathing altar in the elephant-faced Hati Besha.",
+  trOr:"ସ୍ନାନ ବେଦୀରେ ଗଜାନନ (ହାତୀ) ବେଶରେ ସର୍ବସାଧାରଣ ଦର୍ଶନ।"},
+
+ {date:"2027-07-05",cat:"jagannath",hol:true,ic:"🛕",en:"Ratha Yatra (Car Festival)",or:"ରଥଯାତ୍ରା",
+  sigEn:"The world-famous Chariot Festival: Jagannath, Balabhadra and Subhadra ride giant chariots from the Puri temple to the Gundicha temple.",
+  sigOr:"ବିଶ୍ୱପ୍ରସିଦ୍ଧ ରଥଯାତ୍ରା: ଜଗନ୍ନାଥ, ବଳଭଦ୍ର ଓ ସୁଭଦ୍ରା ପୁରୀ ମନ୍ଦିରରୁ ଗୁଣ୍ଡିଚା ମନ୍ଦିରକୁ ରଥରେ ବିଜେ କରନ୍ତି।",
+  trEn:"Chhera Pahanra (the Gajapati king sweeps the chariots); lakhs pull the three cars down the Bada Danda. Celebrated across Odisha and worldwide.",
+  trOr:"ଛେରା ପହଁରା (ଗଜପତି ମହାରାଜା ରଥ ଝାଡ଼ନ୍ତି); ଲକ୍ଷ ଲକ୍ଷ ଭକ୍ତ ବଡ଼ଦାଣ୍ଡରେ ରଥ ଟାଣନ୍ତି।"},
+
+ {date:"2027-07-13",cat:"jagannath",hol:false,ic:"🔁",en:"Bahuda Yatra (Return)",or:"ବାହୁଡ଼ା ଯାତ୍ରା",
+  sigEn:"The return journey of the deities from the Gundicha temple back to the main temple.",
+  sigOr:"ଗୁଣ୍ଡିଚା ମନ୍ଦିରରୁ ଦେବତାମାନଙ୍କ ବଡ଼ ଦେଉଳକୁ ପ୍ରତ୍ୟାବର୍ତ୍ତନ।",
+  trEn:"The three chariots are pulled back to the Lion's Gate; Poda Pitha is offered.",
+  trOr:"ତିନି ରଥ ସିଂହଦ୍ୱାରକୁ ଟଣା ହୁଏ; ପୋଡ଼ ପିଠା ଅର୍ପଣ।"},
+
+ {date:"2027-07-14",cat:"jagannath",hol:false,ic:"👑",en:"Suna Besha",or:"ସୁନା ବେଶ",
+  sigEn:"The deities are adorned with dazzling gold ornaments on the chariots at the Lion's Gate.",
+  sigOr:"ସିଂହଦ୍ୱାରରେ ରଥ ଉପରେ ଦେବତାମାନେ ସୁନା ଅଳଙ୍କାରରେ ସଜ୍ଜିତ ହୁଅନ୍ତି।",
+  trEn:"Golden-attire darshan, also called Bada Tadhau Besha.",
+  trOr:"ସୁନା ବେଶ ଦର୍ଶନ, ଯାହା ବଡ଼ ତଡ଼ଉ ବେଶ ମଧ୍ୟ କୁହାଯାଏ।"},
+
+ {date:"2027-07-16",cat:"jagannath",hol:false,ic:"🚪",en:"Niladri Bije",or:"ନୀଳାଦ୍ରି ବିଜେ",
+  sigEn:"The deities re-enter the sanctum, concluding Rath Yatra, with the playful Lakshmi–Jagannath reconciliation.",
+  sigOr:"ଦେବତାମାନେ ଗର୍ଭଗୃହକୁ ପ୍ରବେଶ କରି ରଥଯାତ୍ରା ସମାପନ; ଲକ୍ଷ୍ମୀ–ଜଗନ୍ନାଥ ମାନ ଭଞ୍ଜନ।",
+  trEn:"Rasagola is offered to appease Goddess Lakshmi (Rasagola Dibasa).",
+  trOr:"ଦେବୀ ଲକ୍ଷ୍ମୀଙ୍କୁ ମନାଇବାକୁ ରସଗୋଲା ଅର୍ପଣ (ରସଗୋଲା ଦିବସ)।"},
+
+ {date:"2027-07-18",cat:"observance",hol:false,ic:"🙏",en:"Guru Purnima",or:"ଗୁରୁ ପୂର୍ଣ୍ଣିମା",
+  sigEn:"Ashadha full moon honouring teachers and gurus; also Vyasa Purnima.",
+  sigOr:"ଆଷାଢ଼ ପୂର୍ଣ୍ଣିମାରେ ଗୁରୁ ଓ ଶିକ୍ଷକଙ୍କ ସମ୍ମାନ; ବ୍ୟାସ ପୂର୍ଣ୍ଣିମା ମଧ୍ୟ।",
+  trEn:"Disciples honour their gurus with offerings and prayer.",
+  trOr:"ଶିଷ୍ୟମାନେ ଗୁରୁଙ୍କୁ ଅର୍ପଣ ଓ ପ୍ରାର୍ଥନାରେ ସମ୍ମାନ ଦିଅନ୍ତି।"},
+
+ {date:"2027-08-15",cat:"national",hol:true,ic:"🇮🇳",en:"Independence Day",or:"ସ୍ୱାଧୀନତା ଦିବସ",
+  sigEn:"Marks India's independence in 1947; celebrated with flag hoisting nationwide.",
+  sigOr:"୧୯୪୭ ମସିହାରେ ଭାରତର ସ୍ୱାଧୀନତାର ସ୍ମୃତି; ଦେଶସାରା ପତାକା ଉତ୍ତୋଳନ।",
+  trEn:"Flag hoisting, parades and patriotic programmes.",
+  trOr:"ପତାକା ଉତ୍ତୋଳନ, ପରେଡ୍ ଓ ଦେଶାତ୍ମବୋଧକ କାର୍ଯ୍ୟକ୍ରମ।"},
+
+ {date:"2027-08-15",cat:"faith",hol:true,ic:"🕌",en:"Milad-un-Nabi",or:"ମିଲାଦ୍-ଉନ୍-ନବୀ",
+  sigEn:"Celebrates the birth of Prophet Muhammad (subject to moon sighting).",
+  sigOr:"ପୟଗମ୍ବର ମହମ୍ମଦଙ୍କ ଜନ୍ମଦିନ (ଚନ୍ଦ୍ର ଦର୍ଶନ ଅନୁସାରେ)।",
+  trEn:"Processions, naat recitation and charitable acts.",
+  trOr:"ଶୋଭାଯାତ୍ରା, ନାତ୍ ପାଠ ଓ ଦାନ।"},
+
+ {date:"2027-08-17",cat:"hindu",hol:false,ic:"🪢",en:"Jhulan / Gamha Purnima & Rakhi",or:"ଝୁଲଣ / ଗହ୍ମା ପୂର୍ଣ୍ଣିମା ଓ ରାଖୀ",
+  sigEn:"Shravana full moon: the swing festival of Radha–Krishna (Jhulan), the birth of Balabhadra (Gamha), and rakhi-tying between siblings.",
+  sigOr:"ଶ୍ରାବଣ ପୂର୍ଣ୍ଣିମା: ରାଧା–କୃଷ୍ଣଙ୍କ ଝୁଲଣ, ବଳଭଦ୍ରଙ୍କ ଜନ୍ମ (ଗହ୍ମା) ଓ ଭାଇ–ଭଉଣୀ ରାଖୀ।",
+  trEn:"Jhulan swings in temples, Gamha Dian offered to Balabhadra, sisters tie rakhi; farm tools are worshipped.",
+  trOr:"ମନ୍ଦିରରେ ଝୁଲଣ, ବଳଭଦ୍ରଙ୍କୁ ଗହ୍ମା ଦିଆଁ, ଭଉଣୀମାନେ ରାଖୀ ବାନ୍ଧନ୍ତି।"},
+
+ {date:"2027-08-25",cat:"hindu",hol:true,ic:"🦚",en:"Krishna Janmashtami",or:"ଜନ୍ମାଷ୍ଟମୀ",
+  sigEn:"Birth of Lord Krishna at midnight on Bhadraba Krishna Ashtami (Vaishnava reckoning; some observe 24 August).",
+  sigOr:"ଭାଦ୍ରବ କୃଷ୍ଣ ଅଷ୍ଟମୀ ମଧ୍ୟରାତ୍ରିରେ ଭଗବାନ କୃଷ୍ଣଙ୍କ ଜନ୍ମ (ବୈଷ୍ଣବ ଗଣନା; କେହି ୨୪ ଅଗଷ୍ଟ)।",
+  trEn:"Midnight puja, fasting and bhajans; special observance at the Jagannath temple.",
+  trOr:"ମଧ୍ୟରାତ୍ର ପୂଜା, ଉପବାସ ଓ ଭଜନ; ଜଗନ୍ନାଥ ମନ୍ଦିରରେ ବିଶେଷ।"},
+
+ {date:"2027-09-04",cat:"hindu",hol:false,ic:"🐘",en:"Ganesh Chaturthi",or:"ଗଣେଶ ଚତୁର୍ଥୀ",
+  sigEn:"Birth of Lord Ganesha, remover of obstacles; especially observed by students and in schools across Odisha.",
+  sigOr:"ବିଘ୍ନନାଶକ ଭଗବାନ ଗଣେଶଙ୍କ ଜନ୍ମ; ଓଡ଼ିଶାରେ ଛାତ୍ର ଓ ବିଦ୍ୟାଳୟରେ ବିଶେଷ ପାଳିତ।",
+  trEn:"Clay Ganesha idols are installed and later immersed; puja for wisdom and success.",
+  trOr:"ମାଟି ଗଣେଶ ମୂର୍ତ୍ତି ସ୍ଥାପନ ଓ ବିସର୍ଜନ; ବିଦ୍ୟା ଓ ସଫଳତା ପାଇଁ ପୂଜା।"},
+
+ {date:"2027-09-05",cat:"state",hol:true,ic:"🌾",en:"Nuakhai",or:"ନୂଆଖାଇ",
+  sigEn:"The agrarian 'new rice' festival of western Odisha; the season's first grain (Nabanna) is offered to the deity.",
+  sigOr:"ପଶ୍ଚିମ ଓଡ଼ିଶାର କୃଷି ପର୍ବ; ଋତୁର ପ୍ରଥମ ଧାନ (ନବାନ୍ନ) ଦେବୀଙ୍କୁ ଅର୍ପଣ।",
+  trEn:"Nuakhai bhetghat family reunions; Nabanna is offered to Maa Samaleswari; folk song and dance follow.",
+  trOr:"ନୂଆଖାଇ ଭେଟଘାଟ; ମା ସମଲେଶ୍ୱରୀଙ୍କୁ ନବାନ୍ନ ଅର୍ପଣ; ଲୋକନୃତ୍ୟ ଓ ଗୀତ।"},
+
+ {date:"2027-09-30",cat:"observance",hol:false,ic:"🪔",en:"Mahalaya (Sarad Navratri begins)",or:"ମହାଳୟା",
+  sigEn:"End of Pitru Paksha and the awakening of Goddess Durga; Devi Paksha and Sharadiya Navratri begin.",
+  sigOr:"ପିତୃ ପକ୍ଷର ସମାପ୍ତି ଓ ଦେବୀ ଦୁର୍ଗାଙ୍କ ବୋଧନ; ଦେବୀ ପକ୍ଷ ଓ ଶାରଦୀୟ ନବରାତ୍ର ଆରମ୍ଭ।",
+  trEn:"Tarpana for ancestors and Chandi Path; pandal work nears completion.",
+  trOr:"ପିତୃ ତର୍ପଣ ଓ ଚଣ୍ଡୀ ପାଠ; ପାଣ୍ଡେଲ ପ୍ରସ୍ତୁତି ପ୍ରାୟ ସମାପ୍ତ।"},
+
+ {date:"2027-10-02",cat:"national",hol:true,ic:"🕊️",en:"Gandhi Jayanti",or:"ଗାନ୍ଧୀ ଜୟନ୍ତୀ",
+  sigEn:"Birth anniversary of Mahatma Gandhi, the Father of the Nation.",
+  sigOr:"ଜାତିର ପିତା ମହାତ୍ମା ଗାନ୍ଧୀଙ୍କ ଜନ୍ମବାର୍ଷିକୀ।",
+  trEn:"Prayer meetings, cleanliness drives and tributes.",
+  trOr:"ପ୍ରାର୍ଥନା ସଭା, ସଫେଇ ଅଭିଯାନ ଓ ଶ୍ରଦ୍ଧାଞ୍ଜଳି।"},
+
+ {date:"2027-10-06",cat:"hindu",hol:false,ic:"🌺",en:"Maha Saptami",or:"ମହା ସପ୍ତମୀ",
+  sigEn:"Seventh day of Durga Puja; the goddess is invoked into the idols with the Nabapatrika bath.",
+  sigOr:"ଦୁର୍ଗା ପୂଜାର ସପ୍ତମ ଦିନ; ନବପତ୍ରିକା ସ୍ନାନ ସହ ପ୍ରାଣ ପ୍ରତିଷ୍ଠା।",
+  trEn:"Nabapatrika (Kalabou) bath at dawn; pandal-hopping begins.",
+  trOr:"ପ୍ରଭାତରେ ନବପତ୍ରିକା ସ୍ନାନ; ପାଣ୍ଡେଲ ଦର୍ଶନ ଆରମ୍ଭ।"},
+
+ {date:"2027-10-07",cat:"hindu",hol:true,ic:"🌼",en:"Maha Ashtami (Durga Ashtami)",or:"ମହା ଅଷ୍ଟମୀ",
+  sigEn:"The most important day of Durga Puja; Sandhi Puja falls at the juncture of Ashtami and Navami.",
+  sigOr:"ଦୁର୍ଗା ପୂଜାର ସର୍ବାଧିକ ମହତ୍ତ୍ୱପୂର୍ଣ୍ଣ ଦିନ; ଅଷ୍ଟମୀ–ନବମୀ ସନ୍ଧିକ୍ଷଣରେ ସନ୍ଧି ପୂଜା।",
+  trEn:"Kumari Puja, anjali, and 108 lamps and lotuses offered at Sandhi Puja.",
+  trOr:"କୁମାରୀ ପୂଜା, ଅଞ୍ଜଳି, ସନ୍ଧି ପୂଜାରେ ୧୦୮ ଦୀପ ଓ ପଦ୍ମ।"},
+
+ {date:"2027-10-08",cat:"hindu",hol:false,ic:"🔥",en:"Maha Navami",or:"ମହା ନବମୀ",
+  sigEn:"Ninth day and climax of the goddess's battle; the Maha Aarti and homa are performed.",
+  sigOr:"ନବମ ଦିନ ଓ ଦେବୀଙ୍କ ଯୁଦ୍ଧର ଚରମ; ମହା ଆରତି ଓ ହୋମ।",
+  trEn:"Navami homa, bhog and cultural programmes.",
+  trOr:"ନବମୀ ହୋମ, ଭୋଗ ଓ ସାଂସ୍କୃତିକ କାର୍ଯ୍ୟକ୍ରମ।"},
+
+ {date:"2027-10-09",cat:"state",hol:true,ic:"🏹",en:"Vijaya Dashami (Dussehra)",or:"ବିଜୟା ଦଶମୀ / ଦଶହରା",
+  sigEn:"Triumph of good over evil — Durga's victory over Mahishasura and Rama's defeat of Ravana; idols are immersed.",
+  sigOr:"ଅଶୁଭ ଉପରେ ଶୁଭର ବିଜୟ — ମହିଷାସୁର ଓ ରାବଣ ବଧ; ପ୍ରତିମା ବିସର୍ଜନ।",
+  trEn:"Ravana Podi, Sindoor Khela, immersion processions and exchange of greetings (Bijaya).",
+  trOr:"ରାବଣ ପୋଡ଼ି, ସିନ୍ଦୂର ଖେଳ, ବିସର୍ଜନ ଶୋଭାଯାତ୍ରା ଓ ବିଜୟା ସମ୍ମିଳନୀ।"},
+
+ {date:"2027-10-14",cat:"seasonal",hol:false,ic:"🌕",en:"Kumar Purnima",or:"କୁମାର ପୂର୍ଣ୍ଣିମା",
+  sigEn:"Ashwina full moon honouring Kartikeya; unmarried girls worship the moon at night and the Sun at dawn for a good husband.",
+  sigOr:"ଆଶ୍ୱିନ ପୂର୍ଣ୍ଣିମାରେ କାର୍ତ୍ତିକେୟଙ୍କ ପୂଜା; କୁମାରୀମାନେ ଚନ୍ଦ୍ର ଓ ସୂର୍ଯ୍ୟଙ୍କୁ ଅର୍ଘ୍ୟ ଦିଅନ୍ତି।",
+  trEn:"Girls fast, offer to the moon, play puchi and kaudi, and sing Kuanra Punei songs; Lakshmi puja too.",
+  trOr:"ଝିଅମାନେ ଉପବାସ, ଚନ୍ଦ୍ର ଅର୍ଘ୍ୟ, ପୁଚି ଓ କଉଡ଼ି ଖେଳ, କୁଆଁର ପୁନେଇ ଗୀତ।"},
+
+ {date:"2027-10-27",cat:"hindu",hol:false,ic:"🪙",en:"Dhanteras",or:"ଧନତେରସ",
+  sigEn:"Opens the Diwali cluster with the worship of Dhanvantari and Lakshmi and the buying of metal.",
+  sigOr:"ଦୀପାବଳି ପର୍ବର ଆରମ୍ଭ — ଧନ୍ୱନ୍ତରୀ ଓ ଲକ୍ଷ୍ମୀ ପୂଜା ଓ ଧାତୁ କ୍ରୟ।",
+  trEn:"Purchase of gold, silver or utensils and evening Lakshmi–Kubera puja.",
+  trOr:"ସୁନା, ରୂପା କିମ୍ବା ବାସନ କ୍ରୟ ଓ ସନ୍ଧ୍ୟା ଲକ୍ଷ୍ମୀ–କୁବେର ପୂଜା।"},
+
+ {date:"2027-10-29",cat:"state",hol:true,ic:"🪔",en:"Diwali / Kali Puja",or:"ଦୀପାବଳି / କାଳୀ ପୂଜା",
+  sigEn:"Festival of lights on Kartika Amavasya; in Odisha ancestors are remembered with Bada Badua Daka.",
+  sigOr:"କାର୍ତ୍ତିକ ଅମାବାସ୍ୟାରେ ଦୀପ ପର୍ବ; ଓଡ଼ିଶାରେ ବଡ଼ ବଡ଼ୁଆ ଡାକରେ ପିତୃପୁରୁଷଙ୍କ ସ୍ମରଣ।",
+  trEn:"Lamps and fireworks, Lakshmi and Kali Puja; jute-stem torches are raised to guide ancestors to heaven.",
+  trOr:"ଦୀପ ଓ ଆତସବାଜି, ଲକ୍ଷ୍ମୀ ଓ କାଳୀ ପୂଜା; କଉଡ଼ିଆ ମୁଠା ଜାଳି ପିତୃପୁରୁଷଙ୍କୁ ଡାକ।"},
+
+ {date:"2027-10-30",cat:"observance",hol:false,ic:"🐄",en:"Govardhan Puja",or:"ଗୋବର୍ଦ୍ଧନ ପୂଜା",
+  sigEn:"Worship of Govardhan hill and cattle the day after Diwali (Annakut).",
+  sigOr:"ଦୀପାବଳି ପରଦିନ ଗୋବର୍ଦ୍ଧନ ପର୍ବତ ଓ ଗୋଧନ ପୂଜା (ଅନ୍ନକୂଟ)।",
+  trEn:"Annakut food offerings and cow worship.",
+  trOr:"ଅନ୍ନକୂଟ ଅର୍ପଣ ଓ ଗୋ ପୂଜା।"},
+
+ {date:"2027-10-31",cat:"observance",hol:false,ic:"🫂",en:"Bhai Dooj",or:"ଭାଇ ଦୁଇଜ / ଯମ ଦ୍ୱିତୀୟା",
+  sigEn:"Sisters pray for the long life and prosperity of their brothers.",
+  sigOr:"ଭଉଣୀମାନେ ଭାଇଙ୍କ ଦୀର୍ଘାୟୁ ଓ ମଙ୍ଗଳ ପାଇଁ ପ୍ରାର୍ଥନା କରନ୍ତି।",
+  trEn:"Tika, sweets and gifts exchanged between siblings.",
+  trOr:"ଭାଇ–ଭଉଣୀ ମଧ୍ୟରେ ଟିକା, ମିଠା ଓ ଉପହାର।"},
+
+ {date:"2027-11-14",cat:"state",hol:true,ic:"⛵",en:"Kartika Purnima (Boita Bandana)",or:"କାର୍ତ୍ତିକ ପୂର୍ଣ୍ଣିମା / ବୋଇତ ବନ୍ଦାଣ",
+  sigEn:"Full moon ending the holy Kartika month; recalls ancient Odia maritime trade to Bali and Java as tiny boats are floated at dawn.",
+  sigOr:"ପବିତ୍ର କାର୍ତ୍ତିକ ମାସର ପୂର୍ଣ୍ଣିମା; ପ୍ରାଚୀନ ଓଡ଼ିଆ ସାମୁଦ୍ରିକ ବାଣିଜ୍ୟର ସ୍ମୃତିରେ ଭୋର୍‌ରେ ବୋଇତ ଭସାଣ।",
+  trEn:"Boita Bandana ('Aa Ka Ma Bai') at dawn and the grand Bali Jatra fair at Cuttack; also Rasa Purnima and Guru Nanak Jayanti.",
+  trOr:"ଭୋର୍‌ରେ ବୋଇତ ବନ୍ଦାଣ ('ଆ କା ମା ବୈ') ଓ କଟକରେ ବାଲିଯାତ୍ରା ମେଳା; ରାସ ପୂର୍ଣ୍ଣିମା ମଧ୍ୟ।"},
+
+ {date:"2027-11-20",cat:"hindu",hol:false,ic:"👶",en:"Prathamastami",or:"ପ୍ରଥମାଷ୍ଟମୀ",
+  sigEn:"An Odia household festival for the firstborn: mothers and grandmothers pray to Shashthi Devi for the eldest child's long life (observed 20–21 Nov).",
+  sigOr:"ଜ୍ୟେଷ୍ଠ ସନ୍ତାନ ପାଇଁ ଓଡ଼ିଆ ପାରିବାରିକ ପର୍ବ: ମା ଓ ଆଈ ଷଷ୍ଠୀ ଦେବୀଙ୍କ ପାଖରେ ପ୍ରାର୍ଥନା (୨୦–୨୧ ନଭେମ୍ବର)।",
+  trEn:"Enduri pitha wrapped in turmeric leaf, new clothes, aarti and tika for the eldest child.",
+  trOr:"ହଳଦୀ ପତ୍ରରେ ଏଣ୍ଡୁରି ପିଠା, ନୂଆ ଲୁଗା, ଆରତି ଓ ଟିକା।"},
+
+ {date:"2027-12-16",cat:"seasonal",hol:false,ic:"🎭",en:"Dhanu Sankranti (Dhanu Yatra begins)",or:"ଧନୁ ସଂକ୍ରାନ୍ତି / ଧନୁଯାତ୍ରା",
+  sigEn:"Sun enters Sagittarius, opening the month-long Dhanu Yatra of Bargarh — the world's largest open-air theatre, depicting Krishna and Kansa.",
+  sigOr:"ସୂର୍ଯ୍ୟ ଧନୁ ରାଶିରେ ପ୍ରବେଶ କରି ବରଗଡ଼ର ମାସବ୍ୟାପୀ ଧନୁଯାତ୍ରା ଆରମ୍ଭ କରନ୍ତି — ବିଶ୍ୱର ବୃହତ୍ତମ ମୁକ୍ତାକାଶ ରଙ୍ଗମଞ୍ଚ।",
+  trEn:"Pahili Bhoga offerings at dawn through Dhanurmasa; Bargarh town becomes Mathura for the play.",
+  trOr:"ଧନୁର୍ମାସରେ ଭୋର୍‌ର ପହିଲି ଭୋଗ; ବରଗଡ଼ ମଥୁରା ପାଲଟେ।"},
+
+ {date:"2027-12-25",cat:"national",hol:true,ic:"✨",en:"Christmas (Bada Dina)",or:"ବଡ଼ ଦିନ / କ୍ରିସମସ୍",
+  sigEn:"Birth of Jesus Christ, celebrated across Odisha's Christian communities.",
+  sigOr:"ଯୀଶୁ ଖ୍ରୀଷ୍ଟଙ୍କ ଜନ୍ମ, ଓଡ଼ିଶାର ଖ୍ରୀଷ୍ଟିଆନ ସମ୍ପ୍ରଦାୟରେ ପାଳିତ।",
+  trEn:"Church services, carols and festive feasts.",
+  trOr:"ଗିର୍ଜା ପ୍ରାର୍ଥନା, କେରୋଲ ଓ ଭୋଜି।"}
+];
+
+// index: "YYYY-MM-DD" -> [festival,...]
+const FEST_BY_DATE = {};
+FESTIVALS.forEach(f=>{ (FEST_BY_DATE[f.date] = FEST_BY_DATE[f.date] || []).push(f); });
+
+/* ============================================================
+   4.  HELPERS
+   ============================================================ */
+const pad = n => String(n).padStart(2,"0");
+const isoOf = (y,m,d) => `${y}-${pad(m+1)}-${pad(d)}`;              // m: 0-based
+const parseISO = s => { const [y,m,d]=s.split("-").map(Number); return new Date(y,m-1,d); };
+const todayObj = new Date();
+const TODAY_ISO = isoOf(todayObj.getFullYear(), todayObj.getMonth(), todayObj.getDate());
+
+function govtHoliday(dateObj){                 // Sundays + 2nd & 4th Saturdays
+  const wd = dateObj.getDay();
+  if(wd===0) return "sun";
+  if(wd===6){ const wk = Math.floor((dateObj.getDate()-1)/7)+1; if(wk===2||wk===4) return "sat"; }
+  return null;
+}
+const store = {
+  get(k,f){ try{ const v=localStorage.getItem(k); return v==null?f:v; }catch(e){ return f; } },
+  set(k,v){ try{ localStorage.setItem(k,v); }catch(e){} }
+};
+const catClass = c => CATS[c].cls;
+const FEST_SORTED = [...FESTIVALS].sort((a,b)=> a.date<b.date?-1:1);
+
+/* ============================================================
+   5.  BRAND MARK — Konark wheel (the one bold element)
+   ============================================================ */
+function KonarkWheel({size=88, spin=true}){
+  const spokes=[];
+  for(let i=0;i<16;i++){ const a=(i*22.5)*Math.PI/180;
+    spokes.push(React.createElement("line",{key:i,x1:50+14*Math.cos(a),y1:50+14*Math.sin(a),
+      x2:50+40*Math.cos(a),y2:50+40*Math.sin(a),stroke:"currentColor",strokeWidth:i%2?1.4:3,strokeLinecap:"round"}));
+  }
+  const beads=[];
+  for(let i=0;i<24;i++){ const a=(i*15)*Math.PI/180; beads.push(React.createElement("circle",{key:"b"+i,cx:50+46*Math.cos(a),cy:50+46*Math.sin(a),r:1.7,fill:"currentColor"})); }
+  return React.createElement("svg",{className:"netra-wheel",viewBox:"0 0 100 100","aria-hidden":"true",style:{width:size,height:size,color:"var(--haldi-soft)"}},
+    React.createElement("g",{className:spin?"wheel-spin":""},
+      React.createElement("circle",{cx:50,cy:50,r:48,fill:"none",stroke:"currentColor",strokeWidth:2.5}),
+      React.createElement("circle",{cx:50,cy:50,r:42,fill:"none",stroke:"currentColor",strokeWidth:1.5}),
+      ...beads, ...spokes,
+      React.createElement("circle",{cx:50,cy:50,r:13,fill:"none",stroke:"currentColor",strokeWidth:3}),
+      React.createElement("circle",{cx:50,cy:50,r:4,fill:"currentColor"})
+    )
+  );
+}
+
+/* ============================================================
+   6.  COMPONENTS
+   ============================================================ */
+function Masthead({lang,setLang,theme,toggleTheme,t}){
+  return (
+  <header className="masthead">
+    <div className="masthead-inner">
+      <div className="brand">
+        <KonarkWheel size={86}/>
+        <div className="brand-text">
+          <p className="brand-kicker">ଓଡ଼ିଶା · Odisha</p>
+          <h1 className="brand-title">Odia Calendar <span className="yr">2027</span></h1>
+          <p className={"brand-sub"+(lang==="or"?" lang-or":"")}>{t.subtitle}</p>
+        </div>
+      </div>
+      <div className="masthead-controls">
+        <div className="pill-group" role="group" aria-label="Language">
+          <button className={lang==="en"?"on":""} onClick={()=>setLang("en")} aria-pressed={lang==="en"}>English</button>
+          <button className={lang==="or"?"on":""} onClick={()=>setLang("or")} aria-pressed={lang==="or"} lang="or">ଓଡ଼ିଆ</button>
+        </div>
+        <button className="icon-btn" onClick={toggleTheme} aria-label={t.theme} data-tip={t.theme}>{theme==="dark"?"☀️":"🌙"}</button>
+      </div>
+    </div>
+  </header>);
+}
+
+function TodayBand({lang,t,onOpen}){
+  const od = odiaDate(todayObj);
+  const wd = (lang==="or"?WEEKFULL_OR:WEEKFULL_EN)[todayObj.getDay()];
+  const gd = `${(lang==="or"?WEEKFULL_OR:WEEKFULL_EN)[todayObj.getDay()]}, ${num(todayObj.getDate(),lang)} ${(lang==="or"?GMON_OR:GMON_EN)[todayObj.getMonth()]} ${num(todayObj.getFullYear(),lang)}`;
+  const upcoming = FEST_SORTED.find(f=> f.date >= TODAY_ISO) || FEST_SORTED[0];
+  const upObj = parseISO(upcoming.date);
+  const days = Math.round((upObj - new Date(todayObj.getFullYear(),todayObj.getMonth(),todayObj.getDate()))/86400000);
+  return (
+  <div className="today-band">
+    <div className="today-inner">
+      <span className="today-tag">{t.today}</span>
+      <span className={"today-greg"+(lang==="or"?" lang-or":"")}>{gd}</span>
+      <span className="today-dot">◆</span>
+      {od && <span className="today-odia">{od.month[lang]} {num(od.day,lang)}, {t.sala} {num(od.sala,lang)}</span>}
+      <button className="today-up" onClick={()=>onOpen(upcoming)} aria-label={t.upcoming+": "+upcoming[lang]}>
+        <span className="ic">{upcoming.ic}</span>
+        <span>{t.upcoming}: <b className={lang==="or"?"lang-or":""}>{upcoming[lang]}</b> · {days>0?(num(days,lang)+(lang==="or"?" ଦିନ":" days")):(lang==="or"?"ଆଜି":"today")}</span>
+      </button>
+    </div>
+  </div>);
+}
+
+function Toolbar({view,setView,lang,month,setMonth,year,setYear,search,setSearch,t,onPrint,onPdf}){
+  const prev=()=>{ if(month===0){setMonth(11);setYear(year-1);} else setMonth(month-1); };
+  const next=()=>{ if(month===11){setMonth(0);setYear(year+1);} else setMonth(month+1); };
+  return (
+  <div className="toolbar no-print">
+    <div className="toolbar-inner">
+      <div className="views" role="tablist" aria-label="Views">
+        <button role="tab" aria-selected={view==="month"} className={view==="month"?"on":""} onClick={()=>setView("month")}>🗓️ <span>{t.month}</span></button>
+        <button role="tab" aria-selected={view==="year"} className={view==="year"?"on":""} onClick={()=>setView("year")}>📅 <span>{t.year}</span></button>
+        <button role="tab" aria-selected={view==="festival"} className={view==="festival"?"on":""} onClick={()=>setView("festival")}>🎉 <span>{t.festivals}</span></button>
+      </div>
+      {view==="month" && (
+        <div className="nav-group">
+          <button className="arrow" onClick={prev} aria-label="Previous month">‹</button>
+          <div className="period">{(lang==="or"?GMON_OR:GMON_EN)[month]} {num(year,lang)}
+            <small className={lang==="or"?"lang-or":""}>{odMonthsSpan(month,year,lang)}</small></div>
+          <button className="arrow" onClick={next} aria-label="Next month">›</button>
+        </div>)}
+      {view==="year" && <div className="period" style={{minWidth:"auto"}}>{num(2027,lang)}</div>}
+      <div className="spacer"></div>
+      {view==="festival" && (
+        <div className="search">
+          <span className="mag" aria-hidden="true">🔍</span>
+          <input type="search" value={search} onChange={e=>setSearch(e.target.value)} placeholder={t.search} aria-label={t.search}/>
+        </div>)}
+      <button className="tool-btn" onClick={onPrint} data-tip={t.print}>🖨️ <span>{t.print}</span></button>
+      <button className="tool-btn" onClick={onPdf} data-tip="Download PDF">⬇️ <span>{t.pdf}</span></button>
+    </div>
+  </div>);
+}
+// Odia solar months spanning a Gregorian month (for the sub-label)
+function odMonthsSpan(m,y,lang){
+  const a=odiaDate(new Date(y,m,1)), b=odiaDate(new Date(y,m+1,0));
+  if(!a||!b) return "";
+  if(a.month.en===b.month.en) return a.month[lang];
+  return a.month[lang]+" – "+b.month[lang];
+}
+
+function Legend({t,lang}){
+  const items=[["jagannath"],["state"],["national"],["hindu"],["seasonal"],["faith"],["observance"]];
+  return (
+  <div className="legend" aria-hidden="false">
+    {items.map(([c])=> <span key={c}><i className={catClass(c)}></i>{CATS[c][lang]}</span>)}
+    <span><i style={{background:"var(--haldi)",opacity:.5}}></i>{lang==="or"?"ସରକାରୀ ଛୁଟି":"Govt. holiday"}</span>
+  </div>);
+}
+
+function MonthView({month,year,lang,t,onOpen}){
+  const first=new Date(year,month,1).getDay();
+  const days=new Date(year,month+1,0).getDate();
+  const cells=[];
+  for(let i=0;i<first;i++) cells.push(<div key={"b"+i} className="cell blank" aria-hidden="true"></div>);
+  for(let d=1; d<=days; d++){
+    const dateObj=new Date(year,month,d);
+    const key=isoOf(year,month,d);
+    const fests=FEST_BY_DATE[key]||[];
+    const od=odiaDate(dateObj);
+    const gh=govtHoliday(dateObj);
+    const isHoliday=fests.some(f=>f.hol);
+    const cls=["cell"];
+    if(dateObj.getDay()===0) cls.push("sunday");
+    if(isHoliday) cls.push("holiday"); else if(gh) cls.push("govt");
+    if(key===TODAY_ISO) cls.push("today");
+    cells.push(
+      <div key={key} className={cls.join(" ")}>
+        <span className={"g-num"+(dateObj.getDay()===0?" sun":"")}>{num(d,lang)}</span>
+        {od && <span className="o-num">{od.month[lang]} {num(od.day,lang)}</span>}
+        <div className="chips">
+          {fests.slice(0,2).map((f,i)=>(
+            <button key={i} className={"chip "+catClass(f.cat)} onClick={()=>onOpen(f)}
+              data-tip={f[lang]+" · "+(f.hol?t.holiday:CATS[f.cat][lang])} aria-label={f[lang]}>
+              <span className="ic" aria-hidden="true">{f.ic}</span><span className="lbl">{f[lang]}</span>
+            </button>))}
+          {fests.length>2 && <button className="chip more" onClick={()=>onOpen(fests[2])}>+{num(fests.length-2,lang)} {t.more}</button>}
+          {fests.length===0 && gh && <span className="chip" style={{background:"transparent",color:"var(--text-soft)",fontSize:".62rem",padding:"1px 2px"}} data-tip={gh==="sun"?t.govtSun:t.govtSat}></span>}
+        </div>
+      </div>);
+  }
+  return (
+  <div>
+    <div className="cal-card">
+      <div className="weekdays">{(lang==="or"?WEEK_OR:WEEK_EN).map((w,i)=><div key={i} className={i===0?"sun":""}>{w}</div>)}</div>
+      <div className="grid">{cells}</div>
+    </div>
+    <Legend t={t} lang={lang}/>
+  </div>);
+}
+
+function MiniMonth({month,year,lang,onOpen,onJump}){
+  const first=new Date(year,month,1).getDay();
+  const days=new Date(year,month+1,0).getDate();
+  const cells=[];
+  for(let i=0;i<first;i++) cells.push(<div key={"b"+i} className="mini-day"></div>);
+  for(let d=1; d<=days; d++){
+    const dateObj=new Date(year,month,d); const key=isoOf(year,month,d);
+    const fests=FEST_BY_DATE[key]||[]; const isHol=fests.some(f=>f.hol);
+    const cls=["mini-day"];
+    if(dateObj.getDay()===0) cls.push("sun");
+    if(fests.length){ cls.push("fest"); cls.push(isHol?"hol":"festd"); }
+    if(key===TODAY_ISO) cls.push("today");
+    cells.push(<div key={key} className={cls.join(" ")}
+      onClick={fests.length?()=>onOpen(fests[0]):undefined}
+      style={fests.length?{cursor:"pointer"}:undefined}
+      data-tip={fests.length?fests.map(f=>f[lang]).join(" · "):undefined}>{num(d,lang)}</div>);
+  }
+  return (
+  <div className="mini">
+    <h3 onClick={()=>onJump(month)} title={GMON_EN[month]}>{(lang==="or"?GMON_OR:GMON_EN)[month]}
+      <small className={lang==="or"?"lang-or":""}>{odMonthsSpan(month,year,lang)}</small></h3>
+    <div className="mini-grid">
+      {(lang==="or"?WEEK_OR:WEEK_EN).map((w,i)=><div key={i} className={"h"+(i===0?" sun":"")}>{w[0]}</div>)}
+      {cells}
+    </div>
+  </div>);
+}
+
+function YearView({lang,onOpen,onJump}){
+  return (
+  <div>
+    <div className="sec-head"><h2>{lang==="or"?T.or.allYear:"Odisha 2027 — year at a glance"}</h2><span className="rule"></span></div>
+    <div className="year-grid">
+      {Array.from({length:12},(_,m)=><MiniMonth key={m} month={m} year={2027} lang={lang} onOpen={onOpen} onJump={onJump}/>)}
+    </div>
+  </div>);
+}
+
+function FestivalView({lang,t,search,filter,setFilter,onOpen}){
+  const list=useMemo(()=>{
+    const q=search.trim().toLowerCase();
+    return FEST_SORTED.filter(f=>{
+      if(filter==="holiday" && !f.hol) return false;
+      if(filter!=="all" && filter!=="holiday" && f.cat!==filter) return false;
+      if(!q) return true;
+      return (f.en+" "+f.or+" "+f.sigEn+" "+f.sigOr).toLowerCase().includes(q);
+    });
+  },[search,filter]);
+  const chips=[["all",t.all],["holiday",t.holidaysOnly],...Object.keys(CATS).map(c=>[c,CATS[c][lang]])];
+  return (
+  <div>
+    <div className="sec-head"><h2 className={lang==="or"?"lang-or":""}>{lang==="or"?T.or.allYear:"All 2027 festivals & holidays"}</h2><span className="rule"></span></div>
+    <div className="filters no-print">
+      {chips.map(([k,label])=><button key={k} className={filter===k?"on":""} onClick={()=>setFilter(k)}>{label}</button>)}
+    </div>
+    {list.length===0
+      ? <div className="empty"><div className="big">🔍</div><p>{t.noResults}</p></div>
+      : <div className="fest-list">
+          {list.map((f,i)=>{ const dt=parseISO(f.date); const od=odiaDate(dt);
+            return (
+            <button key={i} className="fest-row" style={{borderLeftColor:leftColor(f.cat)}} onClick={()=>onOpen(f)}>
+              <div className="fest-date">
+                <div className="d">{num(dt.getDate(),lang)}</div>
+                <div className="m">{(lang==="or"?GMON_OR:GMON_EN)[dt.getMonth()].slice(0,3)}</div>
+                <div className="w">{(lang==="or"?WEEK_OR:WEEK_EN)[dt.getDay()]}</div>
+              </div>
+              <div className="fest-main">
+                <div className={"nm"+(lang==="or"?" lang-or":"")}>{f[lang]}</div>
+                <div className="od">{lang==="or"?f.en:f.or}{od?" · "+od.month[lang]+" "+num(od.day,lang):""}</div>
+                <div className="sig">{lang==="or"?f.sigOr:f.sigEn}</div>
+              </div>
+              <div className="fest-tags">
+                <span className="fest-emoji" aria-hidden="true">{f.ic}</span>
+                {f.hol && <span className="tag holiday">{t.holiday}</span>}
+                <span className="tag cat" style={{background:leftColor(f.cat)}}>{CATS[f.cat][lang]}</span>
+              </div>
+            </button>);
+          })}
+        </div>}
+  </div>);
+}
+function leftColor(c){ return {jagannath:"var(--sindoor)",state:"var(--haldi)",national:"var(--indigo)",hindu:"var(--leaf)",seasonal:"var(--maroon)",faith:"#5a4a86",observance:"#8a7a5c"}[c]; }
+
+function FestivalModal({fest,lang,t,onClose}){
+  const ref=useRef();
+  useEffect(()=>{ const h=e=>{ if(e.key==="Escape") onClose(); }; document.addEventListener("keydown",h);
+    if(ref.current) ref.current.focus(); return ()=>document.removeEventListener("keydown",h); },[]);
+  if(!fest) return null;
+  const dt=parseISO(fest.date); const od=odiaDate(dt);
+  const gdate=`${num(dt.getDate(),lang)} ${(lang==="or"?GMON_OR:GMON_EN)[dt.getMonth()]} ${num(2027,lang)}`;
+  return (
+  <div className="modal-bg" onClick={onClose} role="dialog" aria-modal="true" aria-label={fest[lang]}>
+    <div className="modal" onClick={e=>e.stopPropagation()} ref={ref} tabIndex={-1}>
+      <div className="modal-head">
+        <button className="close" onClick={onClose} aria-label="Close">✕</button>
+        <div className="modal-emoji" aria-hidden="true">{fest.ic}</div>
+        <h2 className={lang==="or"?"lang-or":""}>{fest[lang]}</h2>
+        <div className="alt">{lang==="or"?fest.en:fest.or}</div>
+        <div className="modal-meta">
+          <div className="meta-box"><div className="k">{t.gregorian}</div><div className="v">{gdate}</div></div>
+          {od && <div className="meta-box"><div className="k">{t.odiaDate}</div><div className="v od">{od.month[lang]} {num(od.day,lang)} · {t.sala} {num(od.sala,lang)}</div></div>}
+          <div className="meta-box"><div className="k">{t.weekday}</div><div className="v">{(lang==="or"?WEEKFULL_OR:WEEKFULL_EN)[dt.getDay()]}</div></div>
+        </div>
+        <div style={{marginTop:"8px",display:"flex",gap:"6px",flexWrap:"wrap"}}>
+          <span className="tag cat" style={{background:leftColor(fest.cat)}}>{CATS[fest.cat][lang]}</span>
+          {fest.hol && <span className="tag holiday">{t.holiday}</span>}
+        </div>
+      </div>
+      <div className="modal-body">
+        <h4>{t.significance}</h4>
+        <p className={lang==="or"?"lang-or":""}>{lang==="or"?fest.sigOr:fest.sigEn}</p>
+        <h4>{t.traditions}</h4>
+        <p className={lang==="or"?"lang-or":""}>{lang==="or"?fest.trOr:fest.trEn}</p>
+      </div>
+    </div>
+  </div>);
+}
+
+function Footer({lang}){
+  return (
+  <footer className="foot">
+    <div className="konark"><KonarkWheel size={40} spin={false}/></div>
+    <p style={{textAlign:"center"}}>{lang==="or"
+      ? "ଓଡ଼ିଆ କ୍ୟାଲେଣ୍ଡର ୨୦୨୭ — ଗ୍ରେଗୋରୀୟ ଓ ଓଡ଼ିଆ ପାଞ୍ଜି ତାରିଖ ସହ ଓଡ଼ିଶାର ପର୍ବ ଓ ଛୁଟି।"
+      : "Odia Calendar 2027 — Odisha festivals & public holidays with Gregorian and Odia Panji dates."}</p>
+    <p style={{textAlign:"center",fontSize:".78rem",opacity:.8}}>{lang==="or"
+      ? "ଚନ୍ଦ୍ର ଓ ଇସଲାମୀ ପର୍ବର ତାରିଖ ସ୍ଥାନୀୟ ପାଞ୍ଜି / ଚନ୍ଦ୍ର ଦର୍ଶନ ଅନୁସାରେ ± ୧ ଦିନ ବଦଳି ପାରେ।"
+      : "Lunar and Islamic festival dates may vary by ±1 day with local panji or moon sighting. Verify state holidays with the official Odisha gazette."}</p>
+  </footer>);
+}
+
+/* ============================================================
+   7.  PDF EXPORT (jsPDF) — English festival list
+   ============================================================ */
+function exportPDF(){
+  const { jsPDF } = window.jspdf;
+  const doc=new jsPDF({unit:"pt",format:"a4"});
+  const W=doc.internal.pageSize.getWidth(); let y=54;
+  doc.setFillColor(193,39,45); doc.rect(0,0,W,72,"F");
+  doc.setTextColor(255,255,255); doc.setFont("times","bold"); doc.setFontSize(22);
+  doc.text("Odia Calendar 2027",40,42);
+  doc.setFont("times","normal"); doc.setFontSize(11);
+  doc.text("Odisha festivals & public holidays  ·  Gregorian + Odia Panji dates",40,60);
+  y=96; doc.setTextColor(30,20,15);
+  const line=(dt,name,od,tag)=>{
+    if(y>790){ doc.addPage(); y=54; }
+    const o=parseISO(dt); const wd=WEEK_EN[o.getDay()];
+    doc.setFont("helvetica","bold"); doc.setFontSize(10); doc.setTextColor(193,39,45);
+    doc.text(`${pad(o.getDate())} ${GMON_SHORT[o.getMonth()]}`,40,y);
+    doc.setTextColor(120,110,95); doc.setFont("helvetica","normal"); doc.setFontSize(8);
+    doc.text(wd,40,y+11);
+    doc.setTextColor(30,20,15); doc.setFont("helvetica","bold"); doc.setFontSize(11);
+    doc.text(name,100,y);
+    doc.setFont("helvetica","normal"); doc.setFontSize(8.5); doc.setTextColor(110,100,85);
+    doc.text(od+(tag?"   ["+tag+"]":""),100,y+11);
+    doc.setDrawColor(220,205,160); doc.line(40,y+18,W-40,y+18);
+    y+=26;
+  };
+  let curMonth=-1;
+  FEST_SORTED.forEach(f=>{
+    const o=parseISO(f.date);
+    if(o.getMonth()!==curMonth){ curMonth=o.getMonth();
+      if(y>770){ doc.addPage(); y=54; }
+      y+=6; doc.setFillColor(28,42,74); doc.rect(40,y-11,W-80,18,"F");
+      doc.setTextColor(255,255,255); doc.setFont("times","bold"); doc.setFontSize(11);
+      doc.text(GMON_EN[curMonth]+" 2027",48,y+2); y+=22; doc.setTextColor(30,20,15);
+    }
+    const od=odiaDate(o);
+    line(f.date, f.en, (od?od.month.en+" "+od.day+", Sala "+od.sala:"")+" · "+f.or, f.hol?"Public holiday":CATS[f.cat].en);
+  });
+  doc.setFontSize(8); doc.setTextColor(140,130,115);
+  doc.text("Lunar & Islamic dates may vary ±1 day by local panji / moon sighting.",40,doc.internal.pageSize.getHeight()-24);
+  doc.save("Odia-Calendar-2027.pdf");
+}
+
+/* ============================================================
+   8.  APP
+   ============================================================ */
+function App(){
+  const [lang,setLang]=useState(()=>store.get("oc-lang","en"));
+  const [theme,setTheme]=useState(()=>store.get("oc-theme",""));
+  const [view,setView]=useState("month");
+  const [month,setMonth]=useState(()=> (todayObj.getFullYear()===2027? todayObj.getMonth():0));
+  const [year,setYear]=useState(2027);
+  const [search,setSearch]=useState("");
+  const [filter,setFilter]=useState("all");
+  const [fest,setFest]=useState(null);
+  const t=T[lang];
+
+  useEffect(()=>{ store.set("oc-lang",lang); document.documentElement.lang=lang; },[lang]);
+  useEffect(()=>{ if(theme) document.documentElement.setAttribute("data-theme",theme); else document.documentElement.removeAttribute("data-theme"); store.set("oc-theme",theme); },[theme]);
+
+  const toggleTheme=()=>{ const cur = theme || (matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"); setTheme(cur==="dark"?"light":"dark"); };
+  const jump=(m)=>{ setMonth(m); setYear(2027); setView("month"); window.scrollTo({top:0,behavior:"smooth"}); };
+
+  return (
+  <React.Fragment>
+    <Masthead lang={lang} setLang={setLang} theme={theme} toggleTheme={toggleTheme} t={t}/>
+    <TodayBand lang={lang} t={t} onOpen={setFest}/>
+    <Toolbar view={view} setView={setView} lang={lang} month={month} setMonth={setMonth} year={year} setYear={setYear}
+      search={search} setSearch={setSearch} t={t} onPrint={()=>window.print()} onPdf={exportPDF}/>
+    <main className="wrap">
+      {view==="month" && (
+        <React.Fragment>
+          <div className="sec-head"><h2>{(lang==="or"?GMON_OR:GMON_EN)[month]} {num(year,lang)}</h2><span className="rule"></span></div>
+          <MonthView month={month} year={year} lang={lang} t={t} onOpen={setFest}/>
+        </React.Fragment>)}
+      {view==="year" && <YearView lang={lang} onOpen={setFest} onJump={jump}/>}
+      {view==="festival" && <FestivalView lang={lang} t={t} search={search} filter={filter} setFilter={setFilter} onOpen={setFest}/>}
+      <Footer lang={lang}/>
+    </main>
+    {fest && <FestivalModal fest={fest} lang={lang} t={t} onClose={()=>setFest(null)}/>}
+  </React.Fragment>);
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App/>);
+</script>
+</body>
+</html>
